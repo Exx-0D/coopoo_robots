@@ -18,6 +18,5 @@ public class RobotT7 extends Robot {
             this.xPosition++;
             this.yPosition -= 2;
         }
-        
     }
 }
