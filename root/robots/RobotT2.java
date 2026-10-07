@@ -18,6 +18,5 @@ public class RobotT2 extends Robot {
             this.xPosition--;
             this.yPosition++;
         }
-        
     }
 }

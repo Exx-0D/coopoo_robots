@@ -17,7 +17,6 @@ public class RobotT1 extends Robot {
         if (this.world.inWorld(this.xPosition + 1, this.yPosition - 1)) {
             this.xPosition++;
             this.yPosition--;
-        }
-        
+        }   
     }
 }
