@@ -38,12 +38,4 @@ public class World {
         }
         return true;
     }
-
-    public void moveRobot() {
-        int xTemp = this.worldRobot.getXPosition() + 1;
-        int yTemp = this.worldRobot.getYPosition() - 1;
-        if (this.inWorld(xTemp, yTemp)) {
-            this.worldRobot.move(xTemp, yTemp);
-        }
-    }
 }
