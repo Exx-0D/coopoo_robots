@@ -52,7 +52,7 @@ public class Robot {
         return this.world;
     }
 
-    public void move(int p_xPosition, int p_yPosition) {
+    public void move() {
         if (this.world.inWorld(this.xPosition + 1, this.yPosition - 1)) {
             this.xPosition++;
             this.yPosition--;
