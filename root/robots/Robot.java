@@ -3,12 +3,12 @@ package root.robots;
 import root.worlds.*;
 
 public class Robot {
-    private final String name;
-    private double version;
-    private int xPosition;
-    private int yPosition;
-    private final World world;
-    private static int COUNTER = 1;
+    protected final String name;
+    protected  double version;
+    protected int xPosition;
+    protected int yPosition;
+    protected final World world;
+    protected static int COUNTER = 1;
 
     public Robot(String p_name, double p_version, int p_xPosition, int p_yPosition, World p_world) {
         // Si la taille du nom est inférieur à 5, on met un nom par défaut
