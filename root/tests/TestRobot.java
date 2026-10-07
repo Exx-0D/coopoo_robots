@@ -76,4 +76,8 @@ public class TestRobot {
         assertEquals(8, tRobot5.getXPosition());
         assertEquals(0, tRobot5.getYPosition());
     }
+
+    // Tester l'ajout d'un robot sur une case prise
+
+    //Tester la colision entre robots
 }
