@@ -20,7 +20,6 @@ public class Robot {
         }
         this.version = p_version;
         this.world = p_world;
-        this.world.setWorldRobot(this);
         // Si le robot est hors du monde
         if (this.world.inWorld(p_xPosition, p_yPosition)) {
             this.xPosition = p_xPosition;
@@ -30,6 +29,7 @@ public class Robot {
             this.xPosition = this.world.getMin();
             this.yPosition = this.world.getMin();
         }
+        this.world.setWorldRobot(this);
     }
 
     public String getName() {
