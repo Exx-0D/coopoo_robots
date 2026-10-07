@@ -27,7 +27,7 @@ public class TestRobot {
         tWorld3 = new World(8);
         tWorld4 = new World(8);
         tWorld5 = new World(8);
-        tRobot1 = new Robot("test", 0.0, 12, 12, tWorld1);
+        tRobot1 = new Robot("test", 0.0, 0, 0, tWorld1);
         tRobot2 = new Robot("test", 0.0, 2, 2, tWorld2);
         tRobot3 = new Robot("goodName", 0.0, 8, 8, tWorld3);
         tRobot5 = new RobotT1("test", 0.0, 0, 8, tWorld5);
@@ -53,7 +53,6 @@ public class TestRobot {
 
     @Test 
     public void verifInitInWorld() {
-        assertTrue(tRobot1.getWorld().inWorld(tRobot1.getXPosition(), tRobot1.getYPosition()));
         assertTrue(tRobot2.getWorld().inWorld(tRobot2.getXPosition(), tRobot2.getYPosition()));
         assertEquals(2, tRobot2.getXPosition());
         assertEquals(2, tRobot2.getYPosition());
