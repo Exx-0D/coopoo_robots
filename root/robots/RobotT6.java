@@ -14,6 +14,8 @@ public class RobotT6 extends Robot {
     }
 
     public void move() {
-        this.xPosition = this.world.getMax();
+        while (this.world.isFree(this.xPosition, this.yPosition - 1)) {
+            this.yPosition--;
+        } 
     }
 }

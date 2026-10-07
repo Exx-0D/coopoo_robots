@@ -14,7 +14,9 @@ public class RobotT3 extends Robot {
     }
 
     public void move() {
-        this.yPosition = this.world.getMin();
+        while (this.world.isFree(this.xPosition + 1, this.yPosition)) {
+            this.xPosition++;
+        }
         
     }
 }

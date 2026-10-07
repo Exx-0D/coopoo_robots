@@ -11,25 +11,20 @@ public class Robot {
     protected static int COUNTER = 1;
 
     public Robot(String p_name, double p_version, int p_xPosition, int p_yPosition, World p_world) {
-        // Si la taille du nom est inférieur à 5, on met un nom par défaut
         if (p_name.length() < 5) { 
             this.name = "Anonymous" + String.valueOf(COUNTER++);
         }
         else {
             this.name = p_name;
         }
-        this.version = p_version;
         this.world = p_world;
-        // Si le robot est hors du monde
-        if (this.world.inWorld(p_xPosition, p_yPosition)) {
-            this.xPosition = p_xPosition;
-            this.yPosition = p_yPosition;
-        }
-        else {
+        if(p_world.isFree(p_xPosition, p_yPosition)) {
+            // Si la taille du nom est inférieur à 5, on met un nom par défaut
+            this.version = p_version;
             this.xPosition = this.world.getMin();
             this.yPosition = this.world.getMin();
+            this.world.setWorldRobot(this);
         }
-        this.world.setWorldRobot(this);
     }
 
     public String getName() {
@@ -53,7 +48,7 @@ public class Robot {
     }
 
     public void move() {
-        if (this.world.inWorld(this.xPosition + 1, this.yPosition - 1)) {
+        if (this.world.isFree(this.xPosition + 1, this.yPosition - 1)) {
             this.xPosition++;
             this.yPosition--;
         }

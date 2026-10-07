@@ -14,7 +14,7 @@ public class RobotT8 extends Robot {
     }
 
     public void move() {
-        if (this.world.inWorld(this.xPosition - 1, this.yPosition - 2)) {
+        if (this.world.isFree(this.xPosition - 1, this.yPosition - 2)) {
             this.xPosition--;
             this.yPosition -= 2;
         }
