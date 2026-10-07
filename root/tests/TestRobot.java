@@ -13,10 +13,12 @@ public class TestRobot {
     static World tWorld2;
     static World tWorld3;
     static World tWorld4;
+    static World tWorld5;
     static Robot tRobot1;
     static Robot tRobot2;
     static Robot tRobot3;
     static Robot tRobot4;
+    static RobotT1 tRobot5;
 
     @BeforeAll 
     static void init() {
@@ -24,10 +26,13 @@ public class TestRobot {
         tWorld2 = new World(8);
         tWorld3 = new World(8);
         tWorld4 = new World(8);
+        tWorld5 = new World(8);
         tRobot1 = new Robot("test", 0.0, 12, 12, tWorld1);
         tRobot2 = new Robot("test", 0.0, 2, 2, tWorld2);
         tRobot3 = new Robot("goodName", 0.0, 8, 8, tWorld3);
+        tRobot5 = new RobotT1("test", 0.0, 0, 8, tWorld5);
         tRobot3.move();
+        tRobot5.move();        
     }
 
     @BeforeEach 
@@ -65,5 +70,11 @@ public class TestRobot {
         tRobot4.move();
         assertEquals(3, tRobot4.getXPosition());
         assertEquals(1, tRobot4.getYPosition());
+    }
+
+    @Test 
+    public void verifSpecificMove() {
+        assertEquals(8, tRobot5.getXPosition());
+        assertEquals(0, tRobot5.getYPosition());
     }
 }
