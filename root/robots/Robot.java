@@ -11,8 +11,10 @@ public class Robot {
     protected static int COUNTER = 1;
     protected final int iPV;
     protected int PV;
+    protected final Type rtype;
+    protected final int pa;
 
-    public Robot(String p_name, double p_version, int p_xPosition, int p_yPosition, World p_world, int p_iPV) {
+    public Robot(String p_name, double p_version, int p_xPosition, int p_yPosition, World p_world, int p_iPV, Type p_rtype, int p_pa) {
         if (p_name.length() < 5) { 
             this.name = "Anonymous" + String.valueOf(COUNTER++);
         }
@@ -21,6 +23,8 @@ public class Robot {
         }
         this.iPV = p_iPV;
         this.PV = p_iPV;
+        this.rtype = p_rtype;
+        this.pa = p_pa;
         this.world = p_world;
         if(p_world.isFree(p_xPosition, p_yPosition)) {
             // Si la taille du nom est inférieur à 5, on met un nom par défaut

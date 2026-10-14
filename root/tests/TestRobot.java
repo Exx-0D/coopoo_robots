@@ -36,13 +36,13 @@ public class TestRobot {
         tWorld5 = new World(8);
         tWorld6 = new World(8);
         tWorld7 = new World(8);
-        tRobot1 = new Robot("test", 0.0, 0, 0, tWorld1, 100);
-        tRobot2 = new Robot("test", 0.0, 2, 2, tWorld2, 100);
-        tRobot3 = new Robot("goodName", 0.0, 8, 8, tWorld3, 100);
-        tRobot6 = new Robot("goodName", 0.0, 4, 4, tWorld3, 100);
-        tRobot7 = new RobotT3("goodName", 0.0, 0, 4, tWorld3, 100);
-        tRobot8 = new RobotT3("goodName", 0.0, 0, 4, tWorld3, 100);
-        tRobot5 = new RobotT1("test", 0.0, 0, 8, tWorld5, 100);
+        tRobot1 = new Robot("test", 0.0, 0, 0, tWorld1, 100, Type.MAGIC, 9);
+        tRobot2 = new Robot("test", 0.0, 2, 2, tWorld2, 100, Type.MAGIC, 9);
+        tRobot3 = new Robot("goodName", 0.0, 8, 8, tWorld3, 100, Type.MAGIC, 9);
+        tRobot6 = new Robot("goodName", 0.0, 4, 4, tWorld3, 100, Type.MAGIC, 9);
+        tRobot7 = new RobotT3("goodName", 0.0, 0, 4, tWorld3, 100, Type.MAGIC, 9);
+        tRobot8 = new RobotT3("goodName", 0.0, 0, 4, tWorld3, 100, Type.MAGIC, 9);
+        tRobot5 = new RobotT1("test", 0.0, 0, 8, tWorld5, 100, Type.MAGIC, 9);
         tRobot3.move();
         tRobot5.move();     
         tRobot7.move();   
@@ -50,7 +50,7 @@ public class TestRobot {
 
     @BeforeEach 
     void reinit() {
-        tRobot4 = new Robot("test", 0.0, 2, 2, tWorld6, 100);
+        tRobot4 = new Robot("test", 0.0, 2, 2, tWorld6, 100, Type.MAGIC, 9);
     }
     
     @Test
