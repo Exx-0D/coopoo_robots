@@ -16,7 +16,6 @@ public class RobotT3 extends Robot {
     public void move() {
         while (this.world.isFree(this.xPosition + 1, this.yPosition)) {
             this.xPosition++;
-        }
-        
+        } 
     }
 }
