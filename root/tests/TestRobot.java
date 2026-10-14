@@ -17,10 +17,14 @@ public class TestRobot {
     static World tWorld4;
     static World tWorld5;
     static World tWorld6;
+    static World tWorld7;
     static Robot tRobot1;
     static Robot tRobot2;
     static Robot tRobot3;
     static Robot tRobot4;
+    static Robot tRobot6;
+    static Robot tRobot8;
+    static RobotT3 tRobot7;
     static RobotT1 tRobot5;
 
     @BeforeAll 
@@ -31,12 +35,17 @@ public class TestRobot {
         tWorld4 = new World(8);
         tWorld5 = new World(8);
         tWorld6 = new World(8);
+        tWorld7 = new World(8);
         tRobot1 = new Robot("test", 0.0, 0, 0, tWorld1);
         tRobot2 = new Robot("test", 0.0, 2, 2, tWorld2);
         tRobot3 = new Robot("goodName", 0.0, 8, 8, tWorld3);
+        tRobot6 = new Robot("goodName", 0.0, 4, 4, tWorld3);
+        tRobot7 = new RobotT3("goodName", 0.0, 0, 4, tWorld3);
+        tRobot8 = new RobotT3("goodName", 0.0, 0, 4, tWorld3);
         tRobot5 = new RobotT1("test", 0.0, 0, 8, tWorld5);
         tRobot3.move();
-        tRobot5.move();        
+        tRobot5.move();     
+        tRobot7.move();   
     }
 
     @BeforeEach 
@@ -82,6 +91,15 @@ public class TestRobot {
     }
 
     // Tester l'ajout d'un robot sur une case prise
+    @Test 
+    public void verifInitColision() {
+        assertEquals(-1, tRobot8.getXPosition());
+    }
 
     //Tester la colision entre robots
+    @Test 
+    public void verifColision() {
+        assertEquals(4, tRobot7.getYPosition());
+        assertEquals(3, tRobot7.getXPosition());
+    }
 }

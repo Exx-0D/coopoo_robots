@@ -5,8 +5,8 @@ import root.worlds.*;
 public class Robot {
     protected final String name;
     protected  double version;
-    protected int xPosition;
-    protected int yPosition;
+    protected int xPosition = -1;
+    protected int yPosition = -1;
     protected final World world;
     protected static int COUNTER = 1;
 
