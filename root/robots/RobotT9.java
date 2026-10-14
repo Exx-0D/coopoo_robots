@@ -5,8 +5,8 @@ import root.worlds.*;
 public class RobotT9 extends Robot {
     private final String creator = "Valentin";
 
-    public RobotT9 (String p_name, double p_version, int p_xPosition, int p_yPosition, World p_world) {
-        super(p_name, p_version, p_xPosition, p_yPosition, p_world);
+    public RobotT9 (String p_name, double p_version, int p_xPosition, int p_yPosition, World p_world, int p_iPV) {
+        super(p_name, p_version, p_xPosition, p_yPosition, p_world, p_iPV);
     }
 
     public String getCreator() {
