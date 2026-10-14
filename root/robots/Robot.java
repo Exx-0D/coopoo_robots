@@ -1,6 +1,7 @@
 package root.robots;
 
 import root.worlds.*;
+import java.util.*;
 
 public class Robot {
     protected final String name;
@@ -80,5 +81,16 @@ public class Robot {
 
     public String toString() {
         return "Robot " + this.name + " at position (" + this.xPosition + ", " + this.yPosition + ") with version " + this.version + " and life " + this.PV + "/" + this.iPV;
+    }
+
+    public int randomTarget() {
+        Random random = new Random();
+        return random.nextInt(this.world.getWorldRobot().size());
+    }
+
+    public void randomAttack() {
+        int index = randomTarget();
+        Robot trobot = this.world.getWorldRobot().get(index);
+        trobot.PV -= this.pa;
     }
 }
