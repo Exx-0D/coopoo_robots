@@ -21,7 +21,7 @@ public class RobotT1 extends Robot {
     }
 
     public void move() {
-        if (this.world.isFree(this.xPosition + 1, this.yPosition -1)) {
+        if (this.world.isFree(this.xPosition + 1, this.yPosition - 1)) {
             direction(1, -1);
         }
         else {

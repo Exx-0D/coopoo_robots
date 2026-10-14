@@ -13,9 +13,18 @@ public class RobotT4 extends Robot {
         return this.creator;
     }
 
+    public void direction(int dx) {
+        while (this.world.isFree(this.xPosition + dx, this.yPosition)) {
+            this.xPosition += dx;
+        }   
+    }
+
     public void move() {
-        while (this.world.isFree(this.xPosition - 1, this.yPosition)) {
-            this.xPosition--;
+        if (this.world.isFree(this.xPosition - 1, this.yPosition)) {
+            direction(-1);
+        }
+        else {
+            direction(1);
         }
     }
 }
