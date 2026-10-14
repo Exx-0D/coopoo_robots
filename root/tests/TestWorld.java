@@ -1,3 +1,5 @@
+package root.tests;
+
 import root.worlds.*;
 
 import static org.junit.jupiter.api.Assertions.*;

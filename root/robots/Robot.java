@@ -21,8 +21,8 @@ public class Robot {
         if(p_world.isFree(p_xPosition, p_yPosition)) {
             // Si la taille du nom est inférieur à 5, on met un nom par défaut
             this.version = p_version;
-            this.xPosition = this.world.getMin();
-            this.yPosition = this.world.getMin();
+            this.xPosition = p_xPosition;
+            this.yPosition = p_yPosition;
             this.world.setWorldRobot(this);
         }
     }

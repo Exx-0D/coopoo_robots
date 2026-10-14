@@ -1,3 +1,5 @@
+package root.tests;
+
 import root.robots.*;
 import root.worlds.*;
 
@@ -14,6 +16,7 @@ public class TestRobot {
     static World tWorld3;
     static World tWorld4;
     static World tWorld5;
+    static World tWorld6;
     static Robot tRobot1;
     static Robot tRobot2;
     static Robot tRobot3;
@@ -27,6 +30,7 @@ public class TestRobot {
         tWorld3 = new World(8);
         tWorld4 = new World(8);
         tWorld5 = new World(8);
+        tWorld6 = new World(8);
         tRobot1 = new Robot("test", 0.0, 0, 0, tWorld1);
         tRobot2 = new Robot("test", 0.0, 2, 2, tWorld2);
         tRobot3 = new Robot("goodName", 0.0, 8, 8, tWorld3);
@@ -37,7 +41,7 @@ public class TestRobot {
 
     @BeforeEach 
     void reinit() {
-        tRobot4 = new Robot("test", 0.0, 2, 2, tWorld2);
+        tRobot4 = new Robot("test", 0.0, 2, 2, tWorld6);
     }
     
     @Test
