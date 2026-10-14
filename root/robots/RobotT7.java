@@ -13,10 +13,19 @@ public class RobotT7 extends Robot {
         return this.creator;
     }
 
+    public void direction(int dy) {
+        if (this.world.isFree(this.xPosition + 1, this.yPosition + dy)) {
+            this.xPosition++;
+            this.yPosition += dy;
+        }   
+    }
+
     public void move() {
         if (this.world.isFree(this.xPosition + 1, this.yPosition - 2)) {
-            this.xPosition++;
-            this.yPosition -= 2;
+            direction(-2);
+        }
+        else {
+            direction(2);
         }
     }
 }
