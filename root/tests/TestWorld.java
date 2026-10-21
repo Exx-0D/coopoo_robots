@@ -1,6 +1,6 @@
 package root.tests;
 
-import root.robots.RobotT1;
+import root.robots.*;
 import root.worlds.*;
 
 import static org.junit.jupiter.api.Assertions.*;
