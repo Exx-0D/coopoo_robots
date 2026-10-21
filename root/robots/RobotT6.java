@@ -14,13 +14,18 @@ public class RobotT6 extends Robot {
     }
 
     public void direction(int dy) {
-        while (this.world.isFree(this.xPosition, this.yPosition + dy)) {
-            this.yPosition += dy;
+        while (this.world.inWorld(this.xPosition, this.yPosition + dy)) {
+            if (this.world.isRobot(this.xPosition, this.yPosition + dy)) {
+                // Bataille
+            }
+            else {
+                this.yPosition += dy;
+            }
         }   
     }
 
     public void move() {
-        if (this.world.isFree(this.xPosition, this.yPosition - 1)) {
+        if (this.world.inWorld(this.xPosition, this.yPosition - 1)) {
             direction(-1);
         }
         else {
