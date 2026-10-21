@@ -1,7 +1,6 @@
 package root.robots;
 
 import root.worlds.*;
-import java.util.*;
 
 public class Robot {
     protected final String name;
