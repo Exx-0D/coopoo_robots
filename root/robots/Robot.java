@@ -82,5 +82,4 @@ public class Robot {
     public String toString() {
         return "Robot " + this.name + " at position (" + this.xPosition + ", " + this.yPosition + ") with version " + this.version + " and life " + this.PV + "/" + this.iPV;
     }
-    //test
 }
