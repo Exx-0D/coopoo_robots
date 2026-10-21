@@ -69,6 +69,9 @@ public class Robot {
 
     public void delPV(int p_quantity) {
         this.PV -= p_quantity;
+        if (this.PV <= 0) {
+            this.world.delRobot(this);
+        }
     }
 
     public void move() {

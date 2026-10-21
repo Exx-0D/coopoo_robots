@@ -70,4 +70,8 @@ public class World {
         return null;
     }
 
+    public void delRobot(Robot tRobot) {
+        this.worldRobot.remove(tRobot);
+    }
+
 }
