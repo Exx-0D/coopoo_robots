@@ -60,4 +60,14 @@ public class World {
             robot.move();
         }
     }
+
+    public Robot getRobotAt(int p_xPosition, int p_yPosition) {
+        for (Robot robot: this.worldRobot) {
+            if ((robot.getXPosition() == p_xPosition) && (robot.getYPosition() == p_yPosition)) {
+                return robot;
+            }
+        }
+        return null;
+    }
+
 }
