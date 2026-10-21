@@ -44,9 +44,6 @@ public class TestWorld {
         assertTrue(tworld2.inWorld(0, 0));
     }
 
-
-
-
     @Test
     public void getRobotAt(){
     assertEquals(trobot1, tworld3.getRobotAt(trobot1.getXPosition(), trobot1.getYPosition()));
